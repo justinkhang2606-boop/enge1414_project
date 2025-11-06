@@ -1,12 +1,15 @@
 void setup() {
   Serial.begin(9600);
-  pinMode(10, OUTPUT);
+  	pinMode(10, OUTPUT);
 	pinMode(A0, INPUT);
 	pinMode(A1, INPUT);
-  pinMode(A2, INPUT);
-  pinMode(A3, INPUT);
-
-  pinMode(2, INPUT);
+  	pinMode(A2, INPUT);
+  	pinMode(A3, INPUT);
+	pinmode(A4, INPUT);
+	pinMOde(A5, INPUT);
+	pinMode(A6, INPUT);
+	pinMode(A7, INPUT); 
+	pinMode(2, INPUT);
 }
 
 // TEST_MODE values:
@@ -43,7 +46,7 @@ void loop() {
   
   if(TEST_MODE == 0){
     tone(10, 440);
-    delay(500); // this line delays 500ms for test_mode 0 (change val to change log speed)
+    delay(100); // this line delays 500ms for test_mode 0 (change val to change log speed)
     noTone(10);
     return;
   }
